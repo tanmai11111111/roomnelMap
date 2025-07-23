@@ -73,22 +73,31 @@
             }
             games.forEach((game, index) => {
                 const card = document.createElement('div');
+                // Trong script.js
+const pageMapping = {
+    'Toán': 'web2.html',
+    'Văn': 'web3.html',
+    'Lý': 'web4.html',
+    'Hóa': 'web5.html',
+    'Sinh': 'web6.html'
+    // Thêm các môn học khác vào đây
+};
                 card.className = 'game-card';
                 card.innerHTML = `
-                    <a href="#" >
-                        <img src="${game.image || 'https://via.placeholder.com/300x150?text=' + game.name}" alt="${game.name}">
-                    </a>
-                    <div class="game-card-content">
-                        <h3>${game.name}</h3>
-                        <p>Dung lượng: ${game.size}</p>
-                        <p>Lớp: ${game.type}</p>
-                        <div class="game-actions">
-                            <button class="show-btn" onclick="window.location.href='web2.html?subject=${encodeURIComponent(game.name)}'">Truy cập</button>
-                            <button class="edit-btn" onclick="editGame(${index})">Sửa</button>
-                            <button class="delete-btn" onclick="deleteGame('${game.name}')">Xóa</button>
-                        </div>
-                    </div>
-                `;
+    <a href="#" >
+        <img src="${game.image || 'https://via.placeholder.com/300x150?text=' + game.name}" alt="${game.name}">
+    </a>
+    <div class="game-card-content">
+        <h3>${game.name}</h3>
+        <p>Dung lượng: ${game.size}</p>
+        <p>Lớp: ${game.type}</p>
+        <div class="game-actions">
+            <button class="show-btn" onclick="window.location.href='${pageMapping[game.name] || 'web2.html'}'">Truy cập</button>
+            <button class="edit-btn" onclick="editGame(${index})">Sửa</button>
+            <button class="delete-btn" onclick="deleteGame('${game.name}')">Xóa</button>
+        </div>
+    </div>
+`;
                 grid.appendChild(card);
             });
         }
