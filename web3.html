@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý file tài liệu</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">Quản lý môn Văn học.</div>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Tìm kiếm ..." oninput="searchGames()">
+            </div>
+            <button class="add-button" onclick="openModal()">Thêm Năm học.</button>
+        </div>
+    </header>
+
+    <section class="games-section">
+        <div class="game-grid" id="gameGrid">
+            <!-- Danh sách trò chơi sẽ được thêm bằng JavaScript -->
+        </div>
+    </section>
+
+    <div class="modal" id="gameModal">
+        <div class="modal-content">
+            <h2>Thêm/Sửa hiện thị môn học</h2>
+            <input type="text" id="gameName" placeholder="Năm học ...">
+            <input type="text" id="gameSize" placeholder="">
+            <input type="text" id="gameType" placeholder="Ghi chú ...">
+             <input type="url" id="gameImage" placeholder="URL(google drive)">
+            <button class="save-btn" onclick="saveGame()">Lưu</button>
+           <button class="cancel-btn" onclick="closeModal()">Hủy</button>
+        </div>
+    </div>
+     <script src="web3cript.js"></script>
+</body>
+</html>
