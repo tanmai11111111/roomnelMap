@@ -152,7 +152,7 @@
 
         // Hàm xóa trò chơi
         function deleteGame(name) {
-            if (confirm(`Bạn có chắc muốn xóa trò chơi ${name}?`)) {
+            if (confirm(`Bạn có chắc muốn xóa ${name}?`)) {
                 GameManager.deleteGame(name);
                 renderGames();
             }
