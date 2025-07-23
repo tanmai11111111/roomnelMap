@@ -83,7 +83,7 @@
                         <h3>${game.name}</h3>
                         <p>Ghi chú: ${game.type}</p>
                         <div class="game-actions">
-                            <a class="show-btn" href="${game.image}">Truy cập111</a>
+                            <a class="show-btn" href="${game.image}">Truy cập</a>
                         
                             <button class="edit-btn" onclick="editGame(${index})">Sửa</button>
                             <button class="delete-btn" onclick="deleteGame('${game.name}')">Xóa</button>
