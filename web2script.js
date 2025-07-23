@@ -66,9 +66,13 @@
 
         // Khởi tạo
         GameManager.loadGames();
-
+function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+}
         // Hàm hiển thị danh sách trò chơi
         function renderGames(games = GameManager.showGames()) {
+            const subject = getQueryParam('subject');
             const grid = document.getElementById('gameGrid');
             grid.innerHTML = '';
             if (games.length === 0) {
@@ -83,7 +87,7 @@
                         <h3>${game.name}</h3>
                         <p>Ghi chú: ${game.type}</p>
                         <div class="game-actions">
-                            <a class="show-btn" href="${game.image}">Truy cập</a>
+                            <a class="show-btn" href="${game.image}">Truy cập111</a>
                         
                             <button class="edit-btn" onclick="editGame(${index})">Sửa</button>
                             <button class="delete-btn" onclick="deleteGame('${game.name}')">Xóa</button>
@@ -92,8 +96,9 @@
                 `;
                 grid.appendChild(card);
             });
+            document.querySelector('header h1').textContent = `Quản lý Danh sách ${subject || 'qua các năm'}`;
         }
-
+GameManager.loadGames();
         // Hàm tìm kiếm
         function searchGames() {
             const key = document.getElementById('searchInput').value.trim();
