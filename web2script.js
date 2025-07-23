@@ -66,7 +66,7 @@
 
         // Khởi tạo
         GameManager.loadGames();
-function getQueryParam(param) {
+        function getQueryParam(param) {
             const urlParams = new URLSearchParams(window.location.search);
             return urlParams.get(param);
 }
@@ -157,7 +157,7 @@ GameManager.loadGames();
 
         // Hàm xóa trò chơi
         function deleteGame(name) {
-            if (confirm(`Bạn có chắc muốn xóa ${name}?`)) {
+            if (confirm(`Bạn có chắc muốn xóa trò chơi ${name}?`)) {
                 GameManager.deleteGame(name);
                 renderGames();
             }
