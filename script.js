@@ -83,7 +83,7 @@
                         <p>Dung lượng: ${game.size}</p>
                         <p>Lớp: ${game.type}</p>
                         <div class="game-actions">
-                            <button class="show-btn" onclick="window.location.href='web2.html'")">Truy cập</button>
+                            <button class="show-btn" onclick="window.location.href='web2.html?subject=${encodeURIComponent(game.name)}'">Truy cập</button>
                             <button class="edit-btn" onclick="editGame(${index})">Sửa</button>
                             <button class="delete-btn" onclick="deleteGame('${game.name}')">Xóa</button>
                         </div>
