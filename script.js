@@ -7,13 +7,14 @@ import { getDatabase, ref, set, get, remove, onValue } from 'https://www.gstatic
 
 // Firebase configuration (replace with your actual config)
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_AUTH_DOMAIN",
-    databaseURL: "YOUR_DATABASE_URL",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
+    apiKey: "AIzaSyBtgW-JvPtPjsSuzHpi_V0JCs_mFU1c59A",
+  authDomain: "filedulieu-a1bc9.firebaseapp.com",
+  projectId: "filedulieu-a1bc9",
+  storageBucket: "filedulieu-a1bc9.firebasestorage.app",
+  messagingSenderId: "83127152882",
+  appId: "1:83127152882:web:20885065b5ab5eae2ce06b",
+  measurementId: "G-KJZF1KPVSC"
+    databaseURL: "https://filedulieu-a1bc9-default-rtdb.asia-southeast1.firebasedatabase.app"
 };
 
 // Initialize Firebase
