@@ -3,37 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quản lý file tài liệu: </title>
- <link rel="stylesheet" href="style.css">
+    <title>Quản lý File Tài liệu</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="header-container">
-            <div class="logo">Quản lý File Tài liệu.</div>
+            <div class="logo">Quản lý File Tài liệu</div>
             <div class="search-bar">
-                <input type="text" id="searchInput" placeholder="Tìm kiếm ..." oninput="searchGames()">
+                <input type="text" id="searchInput" placeholder="Tìm kiếm môn học..." oninput="searchGames()">
             </div>
-            <button class="add-button" onclick="openModal()">Thêm Môn Học.</button>
+            <a class="add-button" onclick="openModal()">Thêm Môn Học</a>
         </div>
     </header>
 
     <section class="games-section">
-        <div class="game-grid" id="gameGrid">
-            <!-- Danh sách trò chơi sẽ được thêm bằng JavaScript -->
-        </div>
+        <div class="game-grid" id="gameGrid"></div>
     </section>
 
     <div class="modal" id="gameModal">
         <div class="modal-content">
-            <h2>Thêm/Sửa hiện thị môn học</h2>
-            <input type="text" id="gameName" placeholder="Tên môn học ...">
-            <input type="text" id="gameSize" placeholder="Dung lượng (e.g., 500MB, 2GB)">
-            <input type="text" id="gameType" placeholder="Ghi chú">
-            <input type="url" id="gameImage" placeholder="URL hình ảnh (tùy chọn)">
+            <h2>Thêm/Sửa Môn Học</h2>
+            <input type="text" id="gameName" placeholder="Tên môn học">
+            <input type="text" id="gameSize" placeholder="Dung lượng">
+            <input type="text" id="gameType" placeholder="Lớp">
+            <input type="text" id="gameImage" placeholder="URL hình ảnh">
             <button class="save-btn" onclick="saveGame()">Lưu</button>
             <button class="cancel-btn" onclick="closeModal()">Hủy</button>
         </div>
     </div>
-     <script src="script.js"></script>
+
+    <script type="module" src="script.js"></script>
 </body>
 </html>
