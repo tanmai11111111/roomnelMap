@@ -94,7 +94,6 @@ const pageMapping = {
         <div class="game-actions">
             <button class="show-btn" onclick="window.location.href='${pageMapping[game.name] || 'web2.html'}'">Truy cập</button>
             <button class="edit-btn" onclick="editGame(${index})">Sửa</button>
-            <button class="delete-btn" onclick="deleteGame('${game.name}')">Xóa</button>
         </div>
     </div>
 `;
